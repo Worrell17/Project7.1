@@ -25,12 +25,12 @@ class ViewController: UITableViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Info", style: .plain, target: self, action: #selector(viewDetail))
 
 
-        let username = "RichW"
-        let password = "Hannah0509"
+        let username = "username"
+        let password = "password"
         let loginData = String(format: "%@:%@", username, password).data(using: String.Encoding.utf8)!
         let base64LoginData = loginData.base64EncodedString()
         
-        let url = URL(string: "https://erwin-dev.myerwin.io/mmf/api/elements?filterId=c7fb3bcf-094c-4316-bb2a-1805d053141b")!
+        let url = URL(string: "...")!
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         request.setValue("Basic \(base64LoginData)", forHTTPHeaderField: "Authorization")
